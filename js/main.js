@@ -3,7 +3,7 @@
 
 // let btn1 = window.document.getElementById('btn1');
 
-window.addEventListener('click', function sendEvent() {
+window.addEventListener('click', function () {
     // let clickedButton = btnID;
     // alert(clickedButton);
     alert('Get Event')
