@@ -1,13 +1,12 @@
 // let btn1 = document.getElementById('btn1');
 
 
-let btn1 = window.document.getElementById('btn1');
+// let btn1 = window.document.getElementById('btn1');
 
-btn1.addEventListener('click', sendEvent());
-
-function sendEvent(btnID) {
-    let clickedButton = btnID;
-    alert(clickedButton);
+window.addEventListener('click', function sendEvent() {
+    // let clickedButton = btnID;
+    // alert(clickedButton);
+    alert('Get Event')
     console.log('Testing ----->>>');
 
     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
@@ -15,14 +14,34 @@ function sendEvent(btnID) {
         data: JSON.stringify({
         event: {
              code: "clickedButton",
-             data: clickedButton
+             data: 'clickedButton'
             }
         })
    }), '*');
    return;
 
 
-}
+});
+
+// function sendEvent(btnID) {
+//     // let clickedButton = btnID;
+//     // alert(clickedButton);
+//     alert('Get Event')
+//     console.log('Testing ----->>>');
+
+//     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+//         event_code: 'ym-client-event',
+//         data: JSON.stringify({
+//         event: {
+//              code: "clickedButton",
+//              data: 'clickedButton'
+//             }
+//         })
+//    }), '*');
+//    return;
+
+
+// }
 
 
 // window.addEventListener('message', function(eventData) {
