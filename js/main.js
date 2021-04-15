@@ -1,21 +1,9 @@
-let frame = document.getElementById('vanguard-main-frame');
-let icon = document.getElementById('vanguard-icon-wrapper');
+// let btn1 = document.getElementById('btn1');
 
 
-function openScreen() {
-    if (frame.style.display === "none") {
-        frame.style.display = "block";
-        icon.style.display = 'none';
-    } else {
-        frame.style.display = "none";
-    }
-}
+let btn1 = window.document.getElementById('btn1');
 
-document.getElementById('close').addEventListener('click', () => {
-    console.error('Nice');
-    frame.style.display = "none";
-    icon.style.display = 'block';
-});
+btn1.addEventListener('click', sendEvent());
 
 function sendEvent(btnID) {
     let clickedButton = btnID;
