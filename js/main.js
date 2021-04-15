@@ -1,6 +1,6 @@
 let frame = document.getElementById('vanguard-main-frame');
 let icon = document.getElementById('vanguard-icon-wrapper');
-let close = document.getElementById('close');
+
 
 function openScreen() {
     if (frame.style.display === "none") {
@@ -11,7 +11,7 @@ function openScreen() {
     }
 }
 
-close.addEventListener('click', () => {
+document.getElementById('close').addEventListener('click', () => {
     console.error('Nice');
     frame.style.display = "none";
     icon.style.display = 'block';
