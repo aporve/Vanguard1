@@ -100,10 +100,10 @@
 
             <div class="col-lg-2 col-md-3 col-sm-3 col-xs-2">
                 <img class=" my-2" style="width: 50px; margin: auto auto;" src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" alt="icon">
-                    <a id="btn1" class="buttons"><i class="fas fa-house-user"></i></a>
-                    <a id="btn2" class="buttons"><i class="fas fa-address-card"></i></a>
-                    <a id="btn3" class="buttons"><i class="fab fa-cuttlefish"></i></a>
-                    <a id="btn4" class="buttons"><i class="fas fa-sign-out-alt"></i></a>
+                    <a id="btn1" class="buttons" onclick="sendEvent('Home')"><i class="fas fa-house-user"></i></a>
+                    <a id="btn2" class="buttons" onclick="sendEvent('About')"><i class="fas fa-address-card"></i></a>
+                    <a id="btn3" class="buttons" onclick="sendEvent('ContactUs')"><i class="fab fa-cuttlefish"></i></a>
+                    <a id="btn4" class="buttons" onclick="sendEvent('Exit')"><i class="fas fa-sign-out-alt"></i></a>
             </div>
 
             <div class="col-lg-10 col-md-9 col-sm-9 col-xs-10 m-0 p-0">
@@ -133,7 +133,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8bbf807456.js" crossorigin="anonymous"></script>
-    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/main.js"></script>
     <script>
         let frame = document.getElementById('vanguard-main-frame');
         let icon = document.getElementById('vanguard-icon-wrapper');

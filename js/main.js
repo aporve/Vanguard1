@@ -3,27 +3,7 @@
 
 // let btn1 = window.document.getElementById('btn1');
 
-window.addEventListener('click', function () {
-    // let clickedButton = btnID;
-    // alert(clickedButton);
-    alert('Get Event')
-    console.log('Testing ----->>>');
-
-    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
-        event_code: 'ym-client-event',
-        data: JSON.stringify({
-        event: {
-             code: "clickedButton",
-             data: 'clickedButton'
-            }
-        })
-   }), '*');
-   return;
-
-
-});
-
-// function sendEvent(btnID) {
+// window.addEventListener('click', function () {
 //     // let clickedButton = btnID;
 //     // alert(clickedButton);
 //     alert('Get Event')
@@ -41,7 +21,26 @@ window.addEventListener('click', function () {
 //    return;
 
 
-// }
+// });
+
+function sendEvent(btnID) {
+    let clickedButton = btnID;
+    alert(clickedButton);
+    console.log('Testing ----->>>');
+
+    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        event_code: 'ym-client-event',
+        data: JSON.stringify({
+        event: {
+             code: "clickedButton",
+             data: 'clickedButton'
+            }
+        })
+   }), '*');
+   return;
+
+
+}
 
 
 // window.addEventListener('message', function(eventData) {
