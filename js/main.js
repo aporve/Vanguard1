@@ -1,6 +1,6 @@
 function sendEvent1(btnID) {
     let clickedButton = btnID;
-    alert(clickedButton);
+    // alert(clickedButton);
     console.log('Testing ----->>>');
 
     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
@@ -19,7 +19,7 @@ function sendEvent1(btnID) {
 
 function sendEvent2(btnID) {
     let clickedButton = btnID;
-    alert(clickedButton);
+    // alert(clickedButton);
     console.log('Testing ----->>>');
     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
         event_code: 'ym-client-event',
@@ -35,7 +35,7 @@ function sendEvent2(btnID) {
 
 function sendEvent3(btnID) {
     let clickedButton = btnID;
-    alert(clickedButton);
+    // alert(clickedButton);
     console.log('Testing ----->>>');
     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
         event_code: 'ym-client-event',
@@ -51,7 +51,7 @@ function sendEvent3(btnID) {
 
 function sendEvent4(btnID) {
     let clickedButton = btnID;
-    alert(clickedButton);
+    // alert(clickedButton);
     console.log('Testing ----->>>');
     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
         event_code: 'ym-client-event',
