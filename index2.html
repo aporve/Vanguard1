@@ -13,11 +13,12 @@
             -webkit-border-radius: 20px;
             -moz-border-radius: 20px;
             border-radius: 20px;
-            height: calc(100vh - 120px);
+            max-height: calc(100vh - 120px);
             /* height: calc(100% - 60px)!important; */
-            max-height:560px!important;
+            /* max-height:560px!important; */
             /* min-height:100px!important; */
-            min-width: 30%;
+            /* min-width: 30%; */
+            max-width: 35%;
             background: rgba(255, 255, 255, 0.9);
             position: fixed;
             right: 20px;
@@ -48,7 +49,7 @@
         
         .title {
             position: absolute;
-            top: 30%;
+            top: auto;
         }
                     
         .close {
@@ -93,6 +94,14 @@
             align-items: center;
         }
 
+        .flex {
+            display: flex;
+        }
+
+        .effect:hover {
+            background-color: rgb(217, 228, 241);
+        }
+
         @media (min-width: 576px) {
             .col-sm-9 {
             flex: 0 0 auto;
@@ -105,24 +114,40 @@
             }
         }
        
+
     </style>
 </head>
 <body>
     <section class="vanguard-main-frame" style="display: none;" id="vanguard-main-frame">
         <div class="row p-0 m-0 h-100" style="position: relative;">
 
-            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-2" style="border-right: 1px solid #eee;">
-                <img class=" my-2" style="width: 50px; margin: auto auto;" src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" alt="icon">
-                    <a id="btn1" class="buttons" onclick="sendEvent1('Home')"><i class="fas fa-house-user"></i></a>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-2 m-0 p-0" style="border-right: 1px solid #eee; ">
+               <div>
+                <img class="my-1 flex effect" style="width: 50px; margin: auto auto;" src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent1('Home')" style="width: 75px; margin: auto auto;" src="./img/VEMO - thick.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent2('About')" style="width: 75px; margin: auto auto;" src="./img/Active Passive - Thick.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent3('ContactUs')" style="width: 75px; margin: auto auto;" src="./img/Asset Allocation - Thick.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent4('Exit')" style="width: 75px; margin: auto auto;" src="./img/Economics - Thick.png" alt="icon">
+                <img class="my-1 flex effect" style="width: 75px; margin: auto auto;" src="./img/Investor Behavior - Thick.png" alt="icon">
+                <img class="my-1 flex effect" style="width: 75px; margin: auto auto;" src="./img/Popular FAQs - Thick.png" alt="icon">
+                <img class="my-1 flex effect" style="width: 75px; margin: auto auto;" src="./img/Retirement Planning - Thick.png" alt="icon"> 
+                <img class="my-1 flex effect" style="width: 75px; margin: auto auto;" src="./img/VCMM Core - Thick.png" alt="icon"> 
+
+                <!-- <img class="my-1 flex" style="width: 80px; margin: auto auto;" src="./img/Retirement Planning - Thick.png" alt="icon"> 
+                <img class="my-1 flex" style="width: 80px; margin: auto auto;" src="./img/VCMM Core - Thick.png" alt="icon">  -->
+
+               
+               </div>
+                    <!-- <a id="btn1" class="buttons" onclick="sendEvent1('Home')"><i class="fas fa-house-user"></i></a>
                     <a id="btn2" class="buttons" onclick="sendEvent2('About')"><i class="fas fa-address-card"></i></a>
                     <a id="btn3" class="buttons" onclick="sendEvent3('ContactUs')"><i class="fab fa-cuttlefish"></i></a>
-                    <a id="btn4" class="buttons" onclick="sendEvent4('Exit')"><i class="fas fa-sign-out-alt"></i></a>
+                    <a id="btn4" class="buttons" onclick="sendEvent4('Exit')"><i class="fas fa-sign-out-alt"></i></a> -->
             </div>
 
             <div class="col-lg-10 col-md-9 col-sm-9 col-xs-10 m-0 p-0">
-               <div class="m-0 p-0" style="height: 10%; background: #96151d; color: white; border-radius: 0px 15px 0px 0px;">
-                    <ul style="list-style: none; width: 100%; height: 100%; position: relative;">
-                        <li class="m-0 p-0 w-100 h-100" ><span class="title">Vanguard </span><span class="fa refresh mx-4">&#xf021;</span><span id="close" class="fa close" onclick="close()">&#xf00d;</span></li>
+               <div class="m-0 p-0" style="height: 10%; background: #eee; color: black; border-radius: 0px 15px 0px 0px;">
+                    <ul class="m-0" style="list-style: none; width: 100%; height: 100%; position: relative;">
+                        <li class="m-0 p-0 w-100 h-100" ><span class="title" id="logoN" style="font-weight: 700; font-size: x-large;">Vanguard </span><span class="fa refresh mx-4">&#xf021;</span><span id="close" class="fa close" onclick="close()">&#xf00d;</span></li>
                     </ul>
                </div>
                <div class="m-0 p-0" style="height: 90%;">
