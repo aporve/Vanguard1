@@ -3,7 +3,7 @@ function sendEvent1(btnID) {
     // alert(clickedButton);
     console.log('Testing ----->>>');
     $("#logoN").text('VEMO 2021');
-    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+    document.getElementById('ymIframe').contentWindow.postMessage({
         event_code: 'ym-client-event',
         data: JSON.stringify({
         event: {
@@ -11,11 +11,28 @@ function sendEvent1(btnID) {
              data: clickedButton
             }
         })
-   }), '*');
+   }, '*');
    return;
-
-
 }
+
+
+
+// function sendEvent1(btnID) {
+//     let clickedButton = btnID;
+//     // alert(clickedButton);
+//     console.log('Testing ----->>>');
+//     $("#logoN").text('VEMO 2021');
+//     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+//         event_code: 'ym-client-event',
+//         data: JSON.stringify({
+//         event: {
+//              code: "Home",
+//              data: clickedButton
+//             }
+//         })
+//    }), '*');
+//    return;
+// }
 
 function sendEvent2(btnID) {
     let clickedButton = btnID;
