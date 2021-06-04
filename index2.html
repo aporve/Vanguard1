@@ -13,7 +13,7 @@
             -webkit-border-radius: 20px;
             -moz-border-radius: 20px;
             border-radius: 20px;
-            max-height: calc(100vh - 120px);
+            max-height: calc(100vh - 100px);
             /* height: calc(100% - 60px)!important; */
             /* max-height:560px!important; */
             /* min-height:100px!important; */
@@ -134,14 +134,14 @@
             <div class="side-bar col-lg-2 col-md-3 col-sm-3 col-xs-2 m-0 p-0" style="border-right: 1px solid #eee; ">
                <div>
                 <img class="my-1 flex effect" style="width: 50px; margin: auto auto;" src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent1('VEMO')" style="width: 75px; margin: auto auto;" src="./img/VEMO - thick.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent2('ACTIVE')" style="width: 75px; margin: auto auto;" src="./img/Active Passive - Thick.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent3('ASSET')" style="width: 75px; margin: auto auto;" src="./img/Asset Allocation - Thick.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent4('ECON')" style="width: 75px; margin: auto auto;" src="./img/Economics - Thick.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent5('INVESTOR')" style="width: 75px; margin: auto auto;" src="./img/Investor Behavior - Thick.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent6('POPFAQ')" style="width: 75px; margin: auto auto;" src="./img/Popular FAQs - Thick.png" alt="icon">
-                <img class="my-1 flex effect" onclick="sendEvent4('RETIREMENT')" style="width: 75px; margin: auto auto;" src="./img/Retirement Planning - Thick.png" alt="icon"> 
-                <img class="my-1 flex effect" onclick="sendEvent4('VCMM')" style="width: 75px; margin: auto auto;" src="./img/VCMM Core - Thick.png" alt="icon"> 
+                <img class="my-1 flex effect" onclick="sendEvent1('VEMO')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/GnxBWRVeIm6i1622800692538.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent2('ACTIVE')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/4dnzmSDugrwW1622800597860.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent3('ASSET')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/peOgkPdE8n0A1622800752931.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent4('ECON')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/FPloPRu3LmfA1622800812350.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent5('INVESTOR')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/sULHcUPQH5RL1622800858305.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent6('POPFAQ')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/VLla29GmwVpi1622800914321.png" alt="icon">
+                <img class="my-1 flex effect" onclick="sendEvent7('RETIREMENT')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/o2BBDya1HiQT1622800956549.png" alt="icon"> 
+                <img class="my-1 flex effect" onclick="sendEvent8('VCMM')" style="width: 75px; margin: auto auto;" src="https://cdn.yellowmessenger.com/g6Fdrr5NeUj01622800983140.png" alt="icon"> 
 
                 <!-- <img class="my-1 flex" style="width: 80px; margin: auto auto;" src="./img/Retirement Planning - Thick.png" alt="icon"> 
                 <img class="my-1 flex" style="width: 80px; margin: auto auto;" src="./img/VCMM Core - Thick.png" alt="icon">  -->
@@ -181,7 +181,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8bbf807456.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
     <script>
         let frame = document.getElementById('vanguard-main-frame');
         let icon = document.getElementById('vanguard-icon-wrapper');
@@ -201,6 +200,139 @@
             frame.style.display = "none";
             icon.style.display = 'block';
         });
+
+
+        function sendEvent1(btnID) {
+            let clickedButton = btnID;
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            $("#logoN").text('VEMO 2021');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "VEMO",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+        function sendEvent2(btnID) {
+            let clickedButton = btnID;
+            $("#logoN").text('Active/Passive');
+
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "ACTIVE",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+        function sendEvent3(btnID) {
+            let clickedButton = btnID;
+            $("#logoN").text('Popular FAQs');
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "ASSET",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+        function sendEvent4(btnID) {
+            let clickedButton = btnID;
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "ECON",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+        function sendEvent5(btnID) {
+            let clickedButton = btnID;
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "INVESTOR",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+        function sendEvent6(btnID) {
+            let clickedButton = btnID;
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "POPFAQ",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+
+        function sendEvent7(btnID) {
+            let clickedButton = btnID;
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "RETIREMENT",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+        }
+
+        function sendEvent8(btnID) {
+            let clickedButton = btnID;
+            // alert(clickedButton);
+            console.log('Testing ----->>>');
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "VCMM",
+                    data: clickedButton
+                    }
+                })
+        }), '*');
+        return;
+    }
     </script>
 </body>
 </html>
