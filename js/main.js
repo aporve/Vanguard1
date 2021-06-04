@@ -7,7 +7,7 @@ function sendEvent1(btnID) {
         event_code: 'ym-client-event',
         data: JSON.stringify({
         event: {
-             code: "Home",
+             code: "VEMO",
              data: clickedButton
             }
         })
@@ -24,7 +24,7 @@ function sendEvent2(btnID) {
         event_code: 'ym-client-event',
         data: JSON.stringify({
         event: {
-             code: "About",
+             code: "ACTIVE",
              data: clickedButton
             }
         })
@@ -41,7 +41,7 @@ function sendEvent3(btnID) {
         event_code: 'ym-client-event',
         data: JSON.stringify({
         event: {
-             code: "ContactUs",
+             code: "ASSET",
              data: clickedButton
             }
         })
@@ -57,7 +57,94 @@ function sendEvent4(btnID) {
         event_code: 'ym-client-event',
         data: JSON.stringify({
         event: {
-             code: "Exit",
+             code: "ECON",
+             data: clickedButton
+            }
+        })
+   }), '*');
+   return;
+}
+
+
+function sendEvent5(btnID) {
+    let clickedButton = btnID;
+    // alert(clickedButton);
+    console.log('Testing ----->>>');
+    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        event_code: 'ym-client-event',
+        data: JSON.stringify({
+        event: {
+             code: "INVESTOR",
+             data: clickedButton
+            }
+        })
+   }), '*');
+   return;
+}
+
+
+function sendEvent6(btnID) {
+    let clickedButton = btnID;
+    // alert(clickedButton);
+    console.log('Testing ----->>>');
+    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        event_code: 'ym-client-event',
+        data: JSON.stringify({
+        event: {
+             code: "POPFAQ",
+             data: clickedButton
+            }
+        })
+   }), '*');
+   return;
+}
+
+
+
+function sendEvent7(btnID) {
+    let clickedButton = btnID;
+    // alert(clickedButton);
+    console.log('Testing ----->>>');
+    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        event_code: 'ym-client-event',
+        data: JSON.stringify({
+        event: {
+             code: "POPFAQ",
+             data: clickedButton
+            }
+        })
+   }), '*');
+   return;
+}
+
+
+function sendEvent8(btnID) {
+    let clickedButton = btnID;
+    // alert(clickedButton);
+    console.log('Testing ----->>>');
+    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        event_code: 'ym-client-event',
+        data: JSON.stringify({
+        event: {
+             code: "RETIREMENT",
+             data: clickedButton
+            }
+        })
+   }), '*');
+   return;
+}
+
+
+
+function sendEvent8(btnID) {
+    let clickedButton = btnID;
+    // alert(clickedButton);
+    console.log('Testing ----->>>');
+    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        event_code: 'ym-client-event',
+        data: JSON.stringify({
+        event: {
+             code: "VCMM",
              data: clickedButton
             }
         })
